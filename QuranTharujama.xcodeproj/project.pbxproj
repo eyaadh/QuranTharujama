@@ -12,6 +12,10 @@
 		39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEB27FEDED2000EE197 /* Assets.xcassets */; };
 		39D5FBEF27FEDED2000EE197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEE27FEDED2000EE197 /* Preview Assets.xcassets */; };
 		39D5FBFB27FEDF9F000EE197 /* quran_full_en_dv.json in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBFA27FEDF9F000EE197 /* quran_full_en_dv.json */; };
+		39D5FBFD27FEE0FA000EE197 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBFC27FEE0FA000EE197 /* Models.swift */; };
+		39D5FBFF27FEE20A000EE197 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBFE27FEE20A000EE197 /* DataService.swift */; };
+		39D5FC0127FEE3DB000EE197 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FC0027FEE3DB000EE197 /* ViewModels.swift */; };
+		39D5FC0327FEE439000EE197 /* SurahListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FC0227FEE439000EE197 /* SurahListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		39D5FBEB27FEDED2000EE197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39D5FBEE27FEDED2000EE197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		39D5FBFA27FEDF9F000EE197 /* quran_full_en_dv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quran_full_en_dv.json; sourceTree = "<group>"; };
+		39D5FBFC27FEE0FA000EE197 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		39D5FBFE27FEE20A000EE197 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		39D5FC0027FEE3DB000EE197 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		39D5FC0227FEE439000EE197 /* SurahListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			children = (
 				39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */,
 				39D5FBF727FEDEE7000EE197 /* Views */,
+				39D5FBF827FEDEF0000EE197 /* ViewModels */,
 				39D5FBF927FEDEF6000EE197 /* Models */,
 				39D5FBF627FEDEE3000EE197 /* Services */,
 				39D5FBF527FEDEDD000EE197 /* Data */,
@@ -83,6 +92,7 @@
 		39D5FBF627FEDEE3000EE197 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				39D5FBFE27FEE20A000EE197 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -91,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				39D5FBE927FEDED0000EE197 /* TharujamaMainView.swift */,
-				39D5FBF827FEDEF0000EE197 /* ViewModels */,
+				39D5FC0227FEE439000EE197 /* SurahListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 		39D5FBF827FEDEF0000EE197 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				39D5FC0027FEE3DB000EE197 /* ViewModels.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 		39D5FBF927FEDEF6000EE197 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				39D5FBFC27FEE0FA000EE197 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D5FC0327FEE439000EE197 /* SurahListView.swift in Sources */,
+				39D5FBFD27FEE0FA000EE197 /* Models.swift in Sources */,
 				39D5FBEA27FEDED0000EE197 /* TharujamaMainView.swift in Sources */,
+				39D5FC0127FEE3DB000EE197 /* ViewModels.swift in Sources */,
 				39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */,
+				39D5FBFF27FEE20A000EE197 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

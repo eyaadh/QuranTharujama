@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct TharujamaMainView: View {
+    @EnvironmentObject var SurahViewMoel: SurahViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SurahListView()
     }
 }
 
 struct TPP: PreviewProvider {
     static var previews: some View {
         TharujamaMainView()
+            .environmentObject(SurahViewModel())
     }
 }

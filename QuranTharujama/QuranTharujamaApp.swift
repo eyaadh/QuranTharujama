@@ -12,6 +12,7 @@ struct QuranTharujamaApp: App {
     var body: some Scene {
         WindowGroup {
             TharujamaMainView()
+                .environmentObject(SurahViewModel())
         }
     }
 }
