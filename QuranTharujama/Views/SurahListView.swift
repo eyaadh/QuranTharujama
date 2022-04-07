@@ -11,14 +11,32 @@ struct SurahListView: View {
     @EnvironmentObject var SurahViewMoel: SurahViewModel
     var body: some View {
         ScrollView {
-            Text("بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")
-                .padding()
             ForEach(SurahViewMoel.Surahs){surah in
-                LazyVStack (alignment: .center) {
-                    Text(surah.name)
-                    Text(surah.translation)
-                    Text(String(surah.total_verses))
-                }.padding()
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .cornerRadius(4)
+                        .frame(height: 100)
+                        .padding()
+                        .shadow(radius: 4)
+                    
+                    LazyVStack (alignment: .leading) {
+                        HStack{
+                            Image(systemName: "circle.grid.cross.fill")
+                            Spacer()
+                            VStack{
+                                Text(surah.name)
+                                    .font(Font.custom("DecoType Naskh Tegular", size: 25))
+                                Text(surah.translation)
+                                    .font(Font.custom("Optima Bold", size: 20))
+                                Text("Number of Verses: \(String(surah.total_verses))")
+                                .font(Font.custom("Optima Regular", size: 12))
+                            }
+                            Spacer()
+                            Image(systemName: "circle.grid.cross.fill")
+                        }.padding(.horizontal)
+                    }.padding()
+                }
             }
         }
     }
