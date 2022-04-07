@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct SurahListView: View {
-    @EnvironmentObject var SurahViewMoel: SurahViewModel
+    @EnvironmentObject var AppViewModel: AppViewModel
+    
     var body: some View {
         ScrollView {
-            ForEach(SurahViewMoel.Surahs){surah in
+            ForEach(AppViewModel.TranslationData.records){surah in
                 ZStack {
                     Rectangle()
                         .foregroundColor(.white)
                         .cornerRadius(4)
                         .frame(height: 100)
                         .padding()
-                        .shadow(radius: 4)
+                        .shadow(radius: 1.5)
                     
                     LazyVStack (alignment: .leading) {
                         HStack{
@@ -45,6 +46,6 @@ struct SurahListView: View {
 struct SurahListView_Previews: PreviewProvider {
     static var previews: some View {
         SurahListView()
-            .environmentObject(SurahViewModel())
+            .environmentObject(AppViewModel())
     }
 }

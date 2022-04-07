@@ -8,13 +8,13 @@
 import Foundation
 
 class DataService {
-    static func getSurahData() -> [Surah] {
+    static func getData() -> [AppData] {
         // create pathString
-        let pathString = Bundle.main.path(forResource: "quran_full_en_dv", ofType: "json")
+        let pathString = Bundle.main.path(forResource: "full_dataset", ofType: "json")
         
         // create URL from pathString
         guard pathString != nil else {
-            return [Surah]()
+            return [AppData]()
         }
         let url = URL(fileURLWithPath: pathString!)
         
@@ -24,7 +24,7 @@ class DataService {
             
             do {
                 // decode the data
-                let jsonDataSet = try JSONDecoder().decode([Surah].self, from: data)
+                let jsonDataSet = try JSONDecoder().decode([AppData].self, from: data)
                 return jsonDataSet
             } catch {
                 //error while decoding data
@@ -34,6 +34,6 @@ class DataService {
             //error while trying to load data from url
             print(error)
         }
-        return [Surah]()
+        return [AppData]()
     }
 }

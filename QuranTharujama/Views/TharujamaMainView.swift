@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct TharujamaMainView: View {
-    @EnvironmentObject var SurahViewMoel: SurahViewModel
+    @EnvironmentObject var AppViewModel: AppViewModel
     
     var body: some View {
-        VStack {
-            Text("بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ")
-                .font(Font.custom("DecoType Naskh Tegular", size: 15))
-                .shadow(radius: 5)
-                .padding()
-            HStack{
-                Text("Quran Translation")
-                    .font(Font.custom("Optima Bold", size: 20))
-                    .shadow(radius: 5)
-                Spacer()
-                Text("ترجمة القرآن")
-                    .font(Font.custom("DecoType Naskh Tegular", size: 20))
-                    .shadow(radius: 5)
-            }.padding(.horizontal)
-            SurahListView()
+        NavigationView {
+            VStack {
+                Text("﷽")
+                    .font(Font.custom("Optima Bold", size: 28))
+                    .padding(.bottom, 30)
+                    
+                ScrollView{
+                    LazyVStack (alignment: .leading) {
+                        TharujamaRowView(imageName: "quran", heading: "Quran Translation", subHeading: "English & Dhivehi")
+                        TharujamaRowView(imageName: "dua", heading: "Daily Duas", subHeading: "English")
+                    }
+                    .padding()
+                }
+            }
         }
+        .navigationViewStyle(.stack)
         
     }
 }
@@ -34,6 +34,6 @@ struct TharujamaMainView: View {
 struct TPP: PreviewProvider {
     static var previews: some View {
         TharujamaMainView()
-            .environmentObject(SurahViewModel())
+            .environmentObject(AppViewModel())
     }
 }
