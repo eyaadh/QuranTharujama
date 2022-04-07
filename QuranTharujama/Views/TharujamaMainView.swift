@@ -12,10 +12,11 @@ struct TharujamaMainView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("﷽")
-                    .font(Font.custom("Optima Bold", size: 28))
-                    .padding(.bottom, 30)
+            VStack (alignment: .leading) {
+                Text("Select your option to get started:")
+                    .font(Font.custom("Optima Bold", size: 24))
+                    .padding(.horizontal, 30)
+                    .padding(.vertical, 10)
                     
                 ScrollView{
                     LazyVStack (alignment: .leading) {
@@ -25,6 +26,9 @@ struct TharujamaMainView: View {
                     .padding()
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("﷽")
+            
         }
         .navigationViewStyle(.stack)
         
