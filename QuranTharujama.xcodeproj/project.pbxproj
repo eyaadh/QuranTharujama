@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */; };
-		39D5FBEA27FEDED0000EE197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE927FEDED0000EE197 /* ContentView.swift */; };
+		39D5FBEA27FEDED0000EE197 /* TharujamaMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE927FEDED0000EE197 /* TharujamaMainView.swift */; };
 		39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEB27FEDED2000EE197 /* Assets.xcassets */; };
 		39D5FBEF27FEDED2000EE197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEE27FEDED2000EE197 /* Preview Assets.xcassets */; };
+		39D5FBFB27FEDF9F000EE197 /* quran_full_en_dv.json in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBFA27FEDF9F000EE197 /* quran_full_en_dv.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39D5FBE427FEDED0000EE197 /* QuranTharujama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuranTharujama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranTharujamaApp.swift; sourceTree = "<group>"; };
-		39D5FBE927FEDED0000EE197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		39D5FBE927FEDED0000EE197 /* TharujamaMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TharujamaMainView.swift; sourceTree = "<group>"; };
 		39D5FBEB27FEDED2000EE197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39D5FBEE27FEDED2000EE197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39D5FBFA27FEDF9F000EE197 /* quran_full_en_dv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quran_full_en_dv.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,10 @@
 			isa = PBXGroup;
 			children = (
 				39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */,
-				39D5FBE927FEDED0000EE197 /* ContentView.swift */,
+				39D5FBF727FEDEE7000EE197 /* Views */,
+				39D5FBF927FEDEF6000EE197 /* Models */,
+				39D5FBF627FEDEE3000EE197 /* Services */,
+				39D5FBF527FEDEDD000EE197 /* Data */,
 				39D5FBEB27FEDED2000EE197 /* Assets.xcassets */,
 				39D5FBED27FEDED2000EE197 /* Preview Content */,
 			);
@@ -65,6 +70,44 @@
 				39D5FBEE27FEDED2000EE197 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		39D5FBF527FEDEDD000EE197 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				39D5FBFA27FEDF9F000EE197 /* quran_full_en_dv.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		39D5FBF627FEDEE3000EE197 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		39D5FBF727FEDEE7000EE197 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39D5FBE927FEDED0000EE197 /* TharujamaMainView.swift */,
+				39D5FBF827FEDEF0000EE197 /* ViewModels */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39D5FBF827FEDEF0000EE197 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		39D5FBF927FEDEF6000EE197 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D5FBFB27FEDF9F000EE197 /* quran_full_en_dv.json in Resources */,
 				39D5FBEF27FEDED2000EE197 /* Preview Assets.xcassets in Resources */,
 				39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D5FBEA27FEDED0000EE197 /* ContentView.swift in Sources */,
+				39D5FBEA27FEDED0000EE197 /* TharujamaMainView.swift in Sources */,
 				39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
