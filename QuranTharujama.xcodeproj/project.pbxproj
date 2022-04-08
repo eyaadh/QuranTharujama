@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3915191427FF8A4D001A8FEE /* full_dataset.json in Resources */ = {isa = PBXBuildFile; fileRef = 3915191327FF8A4D001A8FEE /* full_dataset.json */; };
+		399E34212800074A00DB2764 /* SurahDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E34202800074A00DB2764 /* SurahDetailView.swift */; };
 		39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */; };
 		39D5FBEA27FEDED0000EE197 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE927FEDED0000EE197 /* HomeMainView.swift */; };
 		39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEB27FEDED2000EE197 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3915191327FF8A4D001A8FEE /* full_dataset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = full_dataset.json; sourceTree = "<group>"; };
+		399E34202800074A00DB2764 /* SurahDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahDetailView.swift; sourceTree = "<group>"; };
 		39D5FBE427FEDED0000EE197 /* QuranTharujama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuranTharujama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranTharujamaApp.swift; sourceTree = "<group>"; };
 		39D5FBE927FEDED0000EE197 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		39AB914A27FFF7EF00539667 /* Surah */ = {
 			isa = PBXGroup;
 			children = (
+				39D5FC0227FEE439000EE197 /* SurahListView.swift */,
+				399E34202800074A00DB2764 /* SurahDetailView.swift */,
 			);
 			path = Surah;
 			sourceTree = "<group>";
@@ -120,7 +124,6 @@
 			children = (
 				39AB914927FFF7D900539667 /* Main */,
 				39AB914A27FFF7EF00539667 /* Surah */,
-				39D5FC0227FEE439000EE197 /* SurahListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39D5FC0327FEE439000EE197 /* SurahListView.swift in Sources */,
+				399E34212800074A00DB2764 /* SurahDetailView.swift in Sources */,
 				39D5FBFD27FEE0FA000EE197 /* Models.swift in Sources */,
 				39D5FBEA27FEDED0000EE197 /* HomeMainView.swift in Sources */,
 				39D5FC0527FF710D000EE197 /* HomeRowView.swift in Sources */,

@@ -22,13 +22,18 @@ struct HomeMainView: View {
                 ScrollView{
                     LazyVStack (alignment: .leading) {
                         // MARK: - Body Content: Quran Translation
-                        
-                        HomeRowView(imageName: AppViewModel.TranslationData.image, heading: AppViewModel.TranslationData.module_name, subHeading: AppViewModel.TranslationData.languages)
+                        NavigationLink {
+                            SurahListView()
+                        } label: {
+                            HomeRowView(imageName: AppViewModel.translationData.image, heading: AppViewModel.translationData.module_name, subHeading: AppViewModel.translationData.languages)
+                        }
+
                         
                         // MARK: - Body Content: Duas
-                        HomeRowView(imageName: AppViewModel.DuasData.image, heading: AppViewModel.DuasData.module_name, subHeading: AppViewModel.DuasData.languages)
+                        HomeRowView(imageName: AppViewModel.duasData.image, heading: AppViewModel.duasData.module_name, subHeading: AppViewModel.duasData.languages)
                     }.padding(.top, 10)
                 }
+                .accentColor(.black)
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("﷽")
