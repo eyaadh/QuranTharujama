@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SurahBottomNavBar: View {
     @EnvironmentObject var AppViewModel: AppViewModel
+    var ScrollIndex:ScrollViewProxy
     var body: some View {
         // show only if there is a next surah available
         if AppViewModel.isNextSurahAvailable() && AppViewModel.isPreviousSurahAvailable() {
@@ -22,6 +23,10 @@ struct SurahBottomNavBar: View {
                     Spacer()
                     Button {
                         AppViewModel.moveToPreviousSurah()
+                        withAnimation {
+                            ScrollIndex.scrollTo("top")
+                        }
+                        
                     } label: {
                         Image(systemName: "chevron.backward")
                         Text("Previous")
@@ -32,6 +37,9 @@ struct SurahBottomNavBar: View {
                     Spacer()
                     Button {
                         AppViewModel.advanceToNextSurah()
+                        withAnimation {
+                            ScrollIndex.scrollTo("top")
+                        }
                     } label: {
                         Text("Next")
                         Image(systemName: "chevron.forward")
@@ -49,6 +57,9 @@ struct SurahBottomNavBar: View {
                 
                 Button {
                     AppViewModel.moveToPreviousSurah()
+                    withAnimation {
+                        ScrollIndex.scrollTo("top")
+                    }
                 } label: {
                     Image(systemName: "chevron.backward")
                     Text("Previous")
@@ -64,6 +75,9 @@ struct SurahBottomNavBar: View {
                 
                 Button {
                     AppViewModel.advanceToNextSurah()
+                    withAnimation {
+                        ScrollIndex.scrollTo("top")
+                    }
                 } label: {
                     Text("Next")
                     
@@ -78,9 +92,9 @@ struct SurahBottomNavBar: View {
     }
 }
 
-struct SurahBottomNavBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SurahBottomNavBar()
-            .environmentObject(AppViewModel())
-    }
-}
+//struct SurahBottomNavBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SurahBottomNavBar()
+//            .environmentObject(AppViewModel())
+//    }
+//}
