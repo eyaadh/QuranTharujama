@@ -12,6 +12,7 @@
 		39C63264280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */; };
 		39C632662800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */; };
 		39C63268280059F900CA2FD0 /* me_quran_volt_newmet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */; };
+		39C6326A2800DD4E00CA2FD0 /* SurahBottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C632692800DD4E00CA2FD0 /* SurahBottomNavBar.swift */; };
 		39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */; };
 		39D5FBEA27FEDED0000EE197 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE927FEDED0000EE197 /* HomeMainView.swift */; };
 		39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEB27FEDED2000EE197 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mv_Elaaf_Normal.otf; sourceTree = "<group>"; };
 		39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KFGQPC Uthman Taha Naskh Regular.ttf"; sourceTree = "<group>"; };
 		39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = me_quran_volt_newmet.ttf; sourceTree = "<group>"; };
+		39C632692800DD4E00CA2FD0 /* SurahBottomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahBottomNavBar.swift; sourceTree = "<group>"; };
 		39D5FBE427FEDED0000EE197 /* QuranTharujama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuranTharujama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranTharujamaApp.swift; sourceTree = "<group>"; };
 		39D5FBE927FEDED0000EE197 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				39D5FC0227FEE439000EE197 /* SurahListView.swift */,
 				399E34202800074A00DB2764 /* SurahDetailView.swift */,
+				39C632692800DD4E00CA2FD0 /* SurahBottomNavBar.swift */,
 			);
 			path = Surah;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				39D5FC0527FF710D000EE197 /* HomeRowView.swift in Sources */,
 				39D5FC0127FEE3DB000EE197 /* ViewModels.swift in Sources */,
 				39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */,
+				39C6326A2800DD4E00CA2FD0 /* SurahBottomNavBar.swift in Sources */,
 				39D5FBFF27FEE20A000EE197 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

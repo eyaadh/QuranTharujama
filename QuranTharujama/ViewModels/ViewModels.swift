@@ -27,6 +27,7 @@ class AppViewModel: ObservableObject {
         
         self.duasData = self.app_data[0].duas
         self.translationData = self.app_data[0].translation
+        self.cSelectSurah = self.translationData.records[1]
     }
     
     // MARK: - Surah Navigation Controls
@@ -43,13 +44,56 @@ class AppViewModel: ObservableObject {
         // Set the current Selected Surah
         cSelectSurah = translationData.records[self.scIndex]
         
-//        To Check Fonts
-//        for family: String in UIFont.familyNames{
-//            print(family)
-//            for names: String in UIFont.fontNames(forFamilyName: family)
-//            {
-//                print("== \(names)")
-//            }
-//        }
+        
     }
+    
+    // MARK: - Check if there is a next Surah
+    func isNextSurahAvailable() -> Bool {
+        return self.translationData.records.count > (self.scIndex + 1)
+    }
+    
+    // MARK: - Check if there is a previous Surah
+    func isPreviousSurahAvailable() -> Bool {
+        return 0 < (self.scIndex - 1) 
+    }
+    
+    // MARK: - Advance to next Surah
+    func advanceToNextSurah() {
+        // increase the scIndex counter
+        self.scIndex += 1
+        
+        // if the index is within range advance otherwise start with first
+        if self.scIndex < self.translationData.records.count {
+            cSelectSurah = self.translationData.records[self.scIndex]
+        } else {
+            self.scIndex = 0
+            cSelectSurah = self.translationData.records[0]
+        }
+    }
+    
+    // MARK: - Move to previous Surah
+    func moveToPreviousSurah() {
+        // increase the scIndex counter
+        self.scIndex -= 1
+        
+        // if the index is grater than 0 then move to previous Surah
+        if self.scIndex > 0 {
+            cSelectSurah = self.translationData.records[self.scIndex]
+        } else {
+            self.scIndex = 0
+            cSelectSurah = self.translationData.records[0]
+        }
+    }
+    
+    // MARK: - Additional Function to check for system fonts
+    private func checkFonts(){
+        for family: String in UIFont.familyNames{
+            print(family)
+            for names: String in UIFont.fontNames(forFamilyName: family)
+            {
+                print("== \(names)")
+            }
+        }
+    }
+    
 }
