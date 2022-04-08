@@ -13,26 +13,25 @@ struct SurahDetailView: View {
     var body: some View {
         if AppViewModel.cSelectSurah != nil {
             ScrollView{
-                ForEach(0..<AppViewModel.cSelectSurah!.verses.count) { index in
-                    
+                ForEach(0..<AppViewModel.cSelectSurah!.verses.count) { vIndex in
                     ZStack {
                         GeometryReader { geo in
                             // rgb(207, 216, 220)
                             Rectangle()
-                                .foregroundColor(index % 2 == 0 ? .white: AppViewModel.bgOddCardColor)
+                                .foregroundColor(vIndex % 2 == 0 ? .white: AppViewModel.bgOddCardColor)
                                 .frame(height: geo.size.height+10)
                                 .shadow(radius: 0.5)
                         }
                         LazyVStack(alignment:.trailing, spacing: 10) {
                             HStack{
                                 VStack(alignment:.trailing, spacing: 10){
-                                    Text(AppViewModel.cSelectSurah!.verses[index].text)
+                                    Text(AppViewModel.cSelectSurah!.verses[vIndex].text)
                                         .font(Font.custom("DecoType Naskh Regular", size: 15))
                                         .multilineTextAlignment(.trailing)
-                                    Text(AppViewModel.cSelectSurah!.verses[index].translation)
+                                    Text(AppViewModel.cSelectSurah!.verses[vIndex].translation)
                                         .font(Font.custom("Optima Regular", size: 15))
                                         .multilineTextAlignment(.leading)
-                                    Text(AppViewModel.cSelectSurah!.verses[index].dv_translation)
+                                    Text(AppViewModel.cSelectSurah!.verses[vIndex].dv_translation)
                                         .font(Font.system(size: 15))
                                         .multilineTextAlignment(.trailing)
                                 }
@@ -41,7 +40,7 @@ struct SurahDetailView: View {
                                     Image(systemName: "circle.fill")
                                         .resizable()
                                         .frame(width: 42, height: 45)
-                                    Text(String(AppViewModel.cSelectSurah!.verses[index].id))
+                                    Text(String(AppViewModel.cSelectSurah!.verses[vIndex].id))
                                         .foregroundColor(.white)
                                         .font(Font.custom("Optima Bold", size: 20))
                                 }
@@ -58,6 +57,8 @@ struct SurahDetailView: View {
                 
             }
             .navigationTitle(AppViewModel.cSelectSurah!.name)
+        } else {
+            Text("Nothing")
         }
         
         

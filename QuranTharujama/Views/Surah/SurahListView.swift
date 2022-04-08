@@ -17,7 +17,7 @@ struct SurahListView: View {
                 NavigationLink {
                     SurahDetailView()
                         .onAppear {
-                            AppViewModel.beginReadingSurah(sIndex: surah.id)
+                            AppViewModel.beginReadingSurah(sIndex: (surah.id - 1))
                         }
                 } label: {
                     ZStack {

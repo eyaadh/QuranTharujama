@@ -41,5 +41,6 @@ class AppViewModel: ObservableObject {
         
         // Set the current Selected Surah
         cSelectSurah = translationData.records[self.scIndex]
+        print(cSelectSurah?.name)
     }
 }
