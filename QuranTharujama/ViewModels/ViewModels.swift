@@ -29,7 +29,7 @@ class AppViewModel: ObservableObject {
     }
     
     // MARK: - Surah Navigation Controls
-    func beginReadingSurah(SurahIndex sIndex:Int){
+    func beginReadingSurah(sIndex:Int){
         // Find the module ID of the current Selected Surah
         for index in 0..<translationData.records.count{
             if sIndex == translationData.records[index].id {

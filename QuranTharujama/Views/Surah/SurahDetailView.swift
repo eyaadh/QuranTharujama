@@ -57,7 +57,7 @@ struct SurahDetailView: View {
                 }
                 
             }
-            .navigationTitle(AppViewModel.translationData.records[0].name)
+            .navigationTitle(AppViewModel.cSelectSurah!.name)
         }
         
         
