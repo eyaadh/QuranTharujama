@@ -40,6 +40,6 @@ class AppViewModel: ObservableObject {
         
         
         // Set the current Selected Surah
-        cSelectSurah = translationData.records[scIndex]
+        cSelectSurah = translationData.records[self.scIndex]
     }
 }

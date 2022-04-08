@@ -13,7 +13,6 @@ struct SurahListView: View {
     
     var body: some View {
         ScrollView {
-            
             ForEach(AppViewModel.translationData.records){surah in
                 NavigationLink {
                     SurahDetailView()
@@ -54,9 +53,6 @@ struct SurahListView: View {
                     }
                 }
                 .accentColor(.black)
-                
-                
-                
             }
         }
         .navigationTitle("Select \(AppViewModel.translationData.module_name)")
