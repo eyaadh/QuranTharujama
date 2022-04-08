@@ -31,7 +31,7 @@ struct SurahListView: View {
                                 Text(surah.translation)
                                     .font(Font.custom("Optima Bold", size: 20))
                                 Text("Number of Verses: \(String(surah.total_verses))")
-                                .font(Font.custom("Optima Regular", size: 12))
+                                    .font(Font.custom("Optima Regular", size: 12))
                             }
                             Spacer()
                             Image(systemName: "circle.grid.cross.fill")

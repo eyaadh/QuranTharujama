@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct TharujamaRowView: View {
+struct HomeRowView: View {
+    @EnvironmentObject var AppViewModel: AppViewModel
+    
     var imageName:String = "quran"
     var heading:String = "Quran Translation"
     var subHeading:String = "English & Dhivehi"
@@ -19,7 +21,7 @@ struct TharujamaRowView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .aspectRatio(CGSize(width:100, height: 35), contentMode: .fit)
-                    .shadow(radius: 3)
+                    .shadow(radius: 1.5)
                 
                 HStack(alignment: .center){
                     Image(imageName)
@@ -46,8 +48,9 @@ struct TharujamaRowView: View {
     }
 }
 
-struct TharujamaRowView_Previews: PreviewProvider {
+struct HomeRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TharujamaRowView()
+        HomeRowView()
+            .environmentObject(AppViewModel())
     }
 }

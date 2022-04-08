@@ -8,9 +8,11 @@
 import Foundation
 
 class AppViewModel: ObservableObject {
+    // MARK: - Globaly Shared Application Data
+    var app_data = [AppData]()
     @Published var DuasData:Duas
     @Published var TranslationData:Translation
-    var app_data = [AppData]()
+    
     
     init() {
         self.app_data = DataService.getData()

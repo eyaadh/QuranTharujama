@@ -11,7 +11,7 @@ import SwiftUI
 struct QuranTharujamaApp: App {
     var body: some Scene {
         WindowGroup {
-            TharujamaMainView()
+            HomeMainView()
                 .environmentObject(AppViewModel())
         }
     }
