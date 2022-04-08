@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3915191427FF8A4D001A8FEE /* full_dataset.json in Resources */ = {isa = PBXBuildFile; fileRef = 3915191327FF8A4D001A8FEE /* full_dataset.json */; };
 		399E34212800074A00DB2764 /* SurahDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E34202800074A00DB2764 /* SurahDetailView.swift */; };
+		39C63264280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */; };
+		39C632662800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */; };
+		39C63268280059F900CA2FD0 /* me_quran_volt_newmet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */; };
 		39D5FBE827FEDED0000EE197 /* QuranTharujamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */; };
 		39D5FBEA27FEDED0000EE197 /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5FBE927FEDED0000EE197 /* HomeMainView.swift */; };
 		39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D5FBEB27FEDED2000EE197 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		3915191327FF8A4D001A8FEE /* full_dataset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = full_dataset.json; sourceTree = "<group>"; };
 		399E34202800074A00DB2764 /* SurahDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahDetailView.swift; sourceTree = "<group>"; };
+		39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mv_Elaaf_Normal.otf; sourceTree = "<group>"; };
+		39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KFGQPC Uthman Taha Naskh Regular.ttf"; sourceTree = "<group>"; };
+		39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = me_quran_volt_newmet.ttf; sourceTree = "<group>"; };
 		39D5FBE427FEDED0000EE197 /* QuranTharujama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuranTharujama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D5FBE727FEDED0000EE197 /* QuranTharujamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranTharujamaApp.swift; sourceTree = "<group>"; };
 		39D5FBE927FEDED0000EE197 /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 		39D5FBF527FEDEDD000EE197 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */,
+				39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */,
+				39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */,
 				3915191327FF8A4D001A8FEE /* full_dataset.json */,
 			);
 			path = Data;
@@ -202,9 +211,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C632662800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf in Resources */,
 				3915191427FF8A4D001A8FEE /* full_dataset.json in Resources */,
 				39D5FBEF27FEDED2000EE197 /* Preview Assets.xcassets in Resources */,
+				39C63264280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf in Resources */,
 				39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */,
+				39C63268280059F900CA2FD0 /* me_quran_volt_newmet.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +366,7 @@
 				DEVELOPMENT_TEAM = 4HKB37NRY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuranTharujama/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -383,6 +396,7 @@
 				DEVELOPMENT_TEAM = 4HKB37NRY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuranTharujama/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

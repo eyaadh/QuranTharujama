@@ -15,7 +15,8 @@ class AppViewModel: ObservableObject {
     @Published var translationData:Translation
     
     // MARK: - Common Element Properties
-    @Published var bgOddCardColor = Color(.sRGB, red: 207/255, green: 216/255, blue: 220/255, opacity: 1)
+    @Published var bgOddCardColorVerse = Color(.sRGB, red: 207/255, green: 216/255, blue: 220/255, opacity: 1)
+    @Published var bgOddCardColorSurah = Color(.sRGB, red: 255/255, green: 204/255, blue: 204/255, opacity: 1)
     
     // MARK: - Current Selected Surah
     @Published var cSelectSurah:Surah?
@@ -41,5 +42,14 @@ class AppViewModel: ObservableObject {
         
         // Set the current Selected Surah
         cSelectSurah = translationData.records[self.scIndex]
+        
+//        To Check Fonts
+//        for family: String in UIFont.familyNames{
+//            print(family)
+//            for names: String in UIFont.fontNames(forFamilyName: family)
+//            {
+//                print("== \(names)")
+//            }
+//        }
     }
 }

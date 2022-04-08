@@ -23,34 +23,36 @@ struct SurahListView: View {
                     ZStack {
                         GeometryReader { geo in
                             Rectangle()
-                                .foregroundColor(surah.id % 2 == 0 ? .white: AppViewModel.bgOddCardColor)
+                                .foregroundColor(surah.id % 2 == 0 ? .white: AppViewModel.bgOddCardColorSurah)
                                 .frame(height: geo.size.height+10)
-                                .shadow(radius: 0.5)
+                                .cornerRadius(5)
+                                .shadow(radius: 0.2)
                         }
-                        LazyVStack (alignment: .leading) {
+                        LazyVStack (alignment: .trailing, spacing: 10) {
                             HStack{
-                                ZStack{
-                                    Image(systemName: "circle.fill")
-                                        .resizable()
-                                        .frame(width: 42, height: 45)
-                                    Text(String(surah.id))
-                                        .foregroundColor(.white)
-                                        .font(Font.custom("Optima Bold", size: 20))
-                                }
-                                .padding(.horizontal, 20)
-                                
-                                
-                                VStack (alignment: .leading){
+                                VStack (alignment:.trailing, spacing: 10){
                                     Text("\(surah.name)")
-                                        .font(Font.custom("DecoType Naskh Regular", size: 20))
+                                        .font(Font.custom("me_quran", size: 20))
+                                    Divider()
                                     Text("(\(surah.translation))")
                                         .font(Font.custom("Optima Bold", size: 18))
                                     Text("Number of Verses: \(String(surah.total_verses))")
                                         .font(Font.custom("Optima Regular", size: 12))
                                 }
-                            }.padding(.horizontal)
-                        }.padding()
-                    }
+                                
+                                ZStack{
+                                    Image(systemName: "circle")
+                                        .resizable()
+                                        .frame(width: 42, height: 45)
+                                    Text(String(surah.id))
+                                        .font(Font.custom("KFGQPC Uthman Taha Naskh", size: 20))
+                                }
+                                .foregroundColor(.primary)
+                                .padding(.horizontal)
+                                
+                            }
+                        }
+                    }.padding()
                 }
                 .accentColor(.black)
             }
