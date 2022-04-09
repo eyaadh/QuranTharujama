@@ -41,7 +41,15 @@ struct SurahBottomNavBar: View {
         } else {
             ZStack {
                 SurahBottomNavBarRectangle()
-                SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
+                HStack {
+                    Spacer()
+                    SurahBottomNavBarHomeButton()
+                    Spacer()
+                    Divider()
+                    Spacer()
+                    SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
+                    Spacer()
+                }
                 
             }
         }
