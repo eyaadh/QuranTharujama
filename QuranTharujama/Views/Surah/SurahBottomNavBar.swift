@@ -65,9 +65,6 @@ struct SurahBottomNavBarNextButton: View {
     var body: some View {
         Button {
             AppViewModel.advanceToNextSurah()
-            withAnimation {
-                ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-            }
         } label: {
             Text("Next")
             
@@ -84,9 +81,6 @@ struct SurahBottomNavBarPrevButton: View {
     var body: some View {
         Button {
             AppViewModel.moveToPreviousSurah()
-            withAnimation {
-                ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-            }
         } label: {
             Image(systemName: "chevron.backward")
             Text("Previous")

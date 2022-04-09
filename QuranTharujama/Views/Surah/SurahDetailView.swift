@@ -80,6 +80,11 @@ struct SurahDetailView: View {
                         }
                         SurahBottomNavBar(ScrollIndex: proxy)
                     }.padding()
+                        .onAppear{
+                            withAnimation {
+                                proxy.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1, anchor: .top)
+                            }
+                        }
                 }
                 
                 
