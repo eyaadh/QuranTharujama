@@ -57,7 +57,7 @@ class AppViewModel: ObservableObject {
     
     // MARK: - Check if there is a previous Surah
     func isPreviousSurahAvailable() -> Bool {
-        return 0 < (self.scIndex - 1) 
+        return 0 <= (self.scIndex - 1) 
     }
     
     // MARK: - Advance to next Surah
