@@ -20,7 +20,6 @@ struct SurahDetailView: View {
                         ForEach(AppViewModel.cSelectSurah!.verses) { verse in
                             ZStack {
                                 GeometryReader { geo in
-                                    // rgb(207, 216, 220)
                                     Rectangle()
                                         .foregroundColor(verse.id % 2 == 0 ? .white: AppViewModel.bgOddCardColorVerse)
                                         .frame(height: geo.size.height+10)
@@ -45,16 +44,27 @@ struct SurahDetailView: View {
                                                 .font(Font.custom("Mv Elaaf Normal", size: 20))
                                                 .multilineTextAlignment(.trailing)
                                         }
-                                        
-                                        ZStack{
-                                            Image(systemName: "circle")
-                                                .resizable()
-                                                .frame(width: 42, height: 45)
-                                            Text(String(verse.id))
-                                                .font(Font.custom("KFGQPC Uthman Taha Naskh", size: 20))
+                                        Button {
+                                            // the first bookmark process is to update the color settings 
+                                            // and any other as this is done from current Selected Surah
+                                            AppViewModel.cSelectSurah?.bookmark = verse.id
+                                            // this bookmark process is to update the bookmark on jsonDataSet
+                                            // so that presists while navigating
+                                            AppViewModel.translationData.records[AppViewModel.scIndex].bookmark = verse.id
+                                        } label: {
+                                            ZStack{
+                                                
+                                                Image(systemName: "circle")
+                                                    .resizable()
+                                                    .frame(width: 42, height: 45)
+                                                Text(String(verse.id))
+                                                    .font(Font.custom("KFGQPC Uthman Taha Naskh", size: 20))
+                                                
+                                            }
+                                            .padding(.horizontal, 20)
+                                            .foregroundColor(AppViewModel.checkIfBookMark(verseID: verse.id))
+                                            
                                         }
-                                        .padding(.horizontal, 20)
-                                        .foregroundColor(.primary)
                                         
                                     }
                                 }

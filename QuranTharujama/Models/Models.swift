@@ -54,6 +54,7 @@ struct Surah: Identifiable, Decodable {
     var translation:String
     var total_verses:Int
     var verses:[Verse]
+    var bookmark:Int
 }
 
 struct Verse: Identifiable, Decodable {

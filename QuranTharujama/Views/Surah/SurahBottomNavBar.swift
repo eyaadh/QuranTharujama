@@ -10,6 +10,7 @@ import SwiftUI
 struct SurahBottomNavBar: View {
     @EnvironmentObject var AppViewModel: AppViewModel
     var ScrollIndex:ScrollViewProxy
+    
     var body: some View {
         // show only if there is a next surah available
         if AppViewModel.isNextSurahAvailable() && AppViewModel.isPreviousSurahAvailable() {
@@ -24,7 +25,7 @@ struct SurahBottomNavBar: View {
                     Button {
                         AppViewModel.moveToPreviousSurah()
                         withAnimation {
-                            ScrollIndex.scrollTo("top")
+                            ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
                         }
                         
                     } label: {
@@ -38,7 +39,7 @@ struct SurahBottomNavBar: View {
                     Button {
                         AppViewModel.advanceToNextSurah()
                         withAnimation {
-                            ScrollIndex.scrollTo("top")
+                            ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
                         }
                     } label: {
                         Text("Next")
@@ -58,7 +59,7 @@ struct SurahBottomNavBar: View {
                 Button {
                     AppViewModel.moveToPreviousSurah()
                     withAnimation {
-                        ScrollIndex.scrollTo("top")
+                        ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
                     }
                 } label: {
                     Image(systemName: "chevron.backward")
@@ -76,7 +77,7 @@ struct SurahBottomNavBar: View {
                 Button {
                     AppViewModel.advanceToNextSurah()
                     withAnimation {
-                        ScrollIndex.scrollTo("top")
+                        ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
                     }
                 } label: {
                     Text("Next")

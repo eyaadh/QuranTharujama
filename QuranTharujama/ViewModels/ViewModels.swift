@@ -85,6 +85,19 @@ class AppViewModel: ObservableObject {
         }
     }
     
+    // MARK: - Bookmark Color Decider
+    func checkIfBookMark(verseID: Int) -> Color {
+        if let x = cSelectSurah {
+            if x.bookmark == verseID {
+                // rgb(22, 160, 133)
+                return Color(.sRGB, red: 22/255, green: 160/255, blue: 133/255)
+            } else {
+                return .primary
+            }
+        }
+        return .primary
+    }
+    
     // MARK: - Additional Function to check for system fonts
     private func checkFonts(){
         for family: String in UIFont.familyNames{
