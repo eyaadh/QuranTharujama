@@ -16,7 +16,6 @@ struct SurahDetailView: View {
             ScrollView{
                 ScrollViewReader{ proxy in
                     VStack{
-                        HStack{Spacer()}.id("top")
                         ForEach(AppViewModel.cSelectSurah!.verses) { verse in
                             ZStack {
                                 GeometryReader { geo in
@@ -81,9 +80,7 @@ struct SurahDetailView: View {
                         SurahBottomNavBar(ScrollIndex: proxy)
                     }.padding()
                         .onAppear{
-                            withAnimation {
-                                proxy.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1, anchor: .top)
-                            }
+                            proxy.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1, anchor: .top)
                         }
                 }
                 
