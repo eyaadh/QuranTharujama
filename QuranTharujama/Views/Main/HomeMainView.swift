@@ -22,12 +22,13 @@ struct HomeMainView: View {
                 ScrollView{
                     LazyVStack (alignment: .leading) {
                         // MARK: - Body Content: Quran Translation
-                        NavigationLink {
+                        NavigationLink(tag: 1, selection: $AppViewModel.cNavTag) {
                             SurahListView()
                         } label: {
                             HomeRowView(imageName: AppViewModel.translationData.image, heading: AppViewModel.translationData.module_name, subHeading: AppViewModel.translationData.languages)
                         }
 
+                        
                         
                         // MARK: - Body Content: Duas
                         HomeRowView(imageName: AppViewModel.duasData.image, heading: AppViewModel.duasData.module_name, subHeading: AppViewModel.duasData.languages)

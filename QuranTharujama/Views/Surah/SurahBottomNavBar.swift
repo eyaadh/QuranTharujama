@@ -12,80 +12,36 @@ struct SurahBottomNavBar: View {
     var ScrollIndex:ScrollViewProxy
     
     var body: some View {
-        // show only if there is a next surah available
         if AppViewModel.isNextSurahAvailable() && AppViewModel.isPreviousSurahAvailable() {
             ZStack {
-                Rectangle()
-                    .frame(height:48)
-                    .foregroundColor(Color.green)
-                    .cornerRadius(5)
-                
+                SurahBottomNavBarRectangle()
                 HStack {
                     Spacer()
-                    Button {
-                        AppViewModel.moveToPreviousSurah()
-                        withAnimation {
-                            ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-                        }
-                        
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                        Text("Previous")
-                    }
-                    .foregroundColor(Color.white)
+                    SurahBottomNavBarPrevButton(ScrollIndex: ScrollIndex)
                     Spacer()
                     Divider()
                     Spacer()
-                    Button {
-                        AppViewModel.advanceToNextSurah()
-                        withAnimation {
-                            ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-                        }
-                    } label: {
-                        Text("Next")
-                        Image(systemName: "chevron.forward")
-                    }
-                    .foregroundColor(Color.white)
+                    SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
                     Spacer()
                 }
             }
         } else if AppViewModel.isPreviousSurahAvailable() {
             ZStack {
-                Rectangle()
-                    .frame(height:48)
-                    .foregroundColor(Color.green)
-                    .cornerRadius(5)
-                
-                Button {
-                    AppViewModel.moveToPreviousSurah()
-                    withAnimation {
-                        ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-                    }
-                } label: {
-                    Image(systemName: "chevron.backward")
-                    Text("Previous")
+                SurahBottomNavBarRectangle()
+                HStack {
+                    Spacer()
+                    SurahBottomNavBarPrevButton(ScrollIndex: ScrollIndex)
+                    Spacer()
+                    Divider()
+                    Spacer()
+                    SurahBottomNavBarHomeButton()
+                    Spacer()
                 }
-                .foregroundColor(Color.white)
             }
         } else {
             ZStack {
-                Rectangle()
-                    .frame(height:48)
-                    .foregroundColor(Color.green)
-                    .cornerRadius(5)
-                
-                Button {
-                    AppViewModel.advanceToNextSurah()
-                    withAnimation {
-                        ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
-                    }
-                } label: {
-                    Text("Next")
-                    
-                    Image(systemName: "chevron.forward")
-                }
-                .foregroundColor(Color.white)
-                
+                SurahBottomNavBarRectangle()
+                SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
                 
             }
         }
@@ -93,9 +49,65 @@ struct SurahBottomNavBar: View {
     }
 }
 
-//struct SurahBottomNavBar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SurahBottomNavBar()
-//            .environmentObject(AppViewModel())
-//    }
-//}
+struct SurahBottomNavBarRectangle: View {
+    var body: some View {
+        Rectangle()
+            .frame(height:48)
+            .foregroundColor(Color.green)
+            .cornerRadius(5)
+    }
+}
+
+struct SurahBottomNavBarNextButton: View {
+    @EnvironmentObject var AppViewModel: AppViewModel
+    var ScrollIndex:ScrollViewProxy
+    
+    var body: some View {
+        Button {
+            AppViewModel.advanceToNextSurah()
+            withAnimation {
+                ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
+            }
+        } label: {
+            Text("Next")
+            
+            Image(systemName: "chevron.forward")
+        }
+        .foregroundColor(Color.white)
+    }
+}
+
+struct SurahBottomNavBarPrevButton: View {
+    @EnvironmentObject var AppViewModel: AppViewModel
+    var ScrollIndex:ScrollViewProxy
+    
+    var body: some View {
+        Button {
+            AppViewModel.moveToPreviousSurah()
+            withAnimation {
+                ScrollIndex.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
+            }
+        } label: {
+            Image(systemName: "chevron.backward")
+            Text("Previous")
+        }
+        .foregroundColor(Color.white)
+    }
+}
+
+
+struct SurahBottomNavBarHomeButton: View {
+    @EnvironmentObject var AppViewModel: AppViewModel
+    
+    var body: some View {
+        Button {
+            AppViewModel.cNavTag = nil
+        } label: {
+            Text("Home")
+            
+            Image(systemName: "house.fill")
+        }
+        .foregroundColor(Color.white)
+    }
+}
+

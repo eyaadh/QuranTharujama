@@ -22,6 +22,9 @@ class AppViewModel: ObservableObject {
     @Published var cSelectSurah:Surah?
     var scIndex:Int = 0
     
+    // MARK: - Current Navigation Tag
+    @Published var cNavTag:Int?
+    
     init() {
         self.app_data = DataService.getData()
         
