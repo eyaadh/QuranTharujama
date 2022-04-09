@@ -45,12 +45,17 @@ struct SurahDetailView: View {
                                                 .multilineTextAlignment(.trailing)
                                         }
                                         Button {
-                                            // the first bookmark process is to update the color settings 
+                                            // the first bookmark process is to update the color settings
                                             // and any other as this is done from current Selected Surah
                                             AppViewModel.cSelectSurah?.bookmark = verse.id
                                             // this bookmark process is to update the bookmark on jsonDataSet
                                             // so that presists while navigating
                                             AppViewModel.translationData.records[AppViewModel.scIndex].bookmark = verse.id
+                                            
+                                            DataService.playAudio(
+                                                file: String(format: "%03d", verse.id),
+                                                directory: "audio/\(String(format: "%03d", AppViewModel.cSelectSurah!.id))")
+                                            
                                         } label: {
                                             ZStack{
                                                 

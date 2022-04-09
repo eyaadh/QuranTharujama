@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3915191427FF8A4D001A8FEE /* full_dataset.json in Resources */ = {isa = PBXBuildFile; fileRef = 3915191327FF8A4D001A8FEE /* full_dataset.json */; };
+		3949CE0028018BEB002A8CB1 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 3949CDFF28018BEB002A8CB1 /* audio */; };
+		3949CE0328018CAF002A8CB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3949CE0228018CAF002A8CB1 /* AVFoundation.framework */; };
 		399E34212800074A00DB2764 /* SurahDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399E34202800074A00DB2764 /* SurahDetailView.swift */; };
 		39C63264280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */; };
 		39C632662800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		3915191327FF8A4D001A8FEE /* full_dataset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = full_dataset.json; sourceTree = "<group>"; };
+		3949CDFF28018BEB002A8CB1 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
+		3949CE0228018CAF002A8CB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		399E34202800074A00DB2764 /* SurahDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahDetailView.swift; sourceTree = "<group>"; };
 		39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mv_Elaaf_Normal.otf; sourceTree = "<group>"; };
 		39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KFGQPC Uthman Taha Naskh Regular.ttf"; sourceTree = "<group>"; };
@@ -48,12 +52,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3949CE0328018CAF002A8CB1 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3949CE0128018CAF002A8CB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3949CE0228018CAF002A8CB1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		39AB914927FFF7D900539667 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 			children = (
 				39D5FBE627FEDED0000EE197 /* QuranTharujama */,
 				39D5FBE527FEDED0000EE197 /* Products */,
+				3949CE0128018CAF002A8CB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +129,7 @@
 		39D5FBF527FEDEDD000EE197 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3949CDFF28018BEB002A8CB1 /* audio */,
 				39C63267280059F900CA2FD0 /* me_quran_volt_newmet.ttf */,
 				39C632652800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf */,
 				39C63263280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf */,
@@ -216,6 +231,7 @@
 			files = (
 				39C632662800585900CA2FD0 /* KFGQPC Uthman Taha Naskh Regular.ttf in Resources */,
 				3915191427FF8A4D001A8FEE /* full_dataset.json in Resources */,
+				3949CE0028018BEB002A8CB1 /* audio in Resources */,
 				39D5FBEF27FEDED2000EE197 /* Preview Assets.xcassets in Resources */,
 				39C63264280055DB00CA2FD0 /* Mv_Elaaf_Normal.otf in Resources */,
 				39D5FBEC27FEDED2000EE197 /* Assets.xcassets in Resources */,
