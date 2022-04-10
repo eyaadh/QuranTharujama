@@ -15,7 +15,8 @@ class AppViewModel: ObservableObject {
     
     // MARK: - Common Element Properties
     @Published var bgOddCardColorVerse = Color(.sRGB, red: 207/255, green: 216/255, blue: 220/255, opacity: 1)
-    @Published var bgOddCardColorSurah = Color(.sRGB, red: 255/255, green: 204/255, blue: 204/255, opacity: 1)
+    @Published var bgOddCardColorSurah = Color(.sRGB, red: 149/255, green: 175/255, blue: 192/255, opacity: 1)
+    // rgb(149, 175, 192)
     
     // MARK: - Filtered Surah
     @Published var filteredSurahList:[Surah] = [Surah]()
