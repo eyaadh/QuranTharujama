@@ -74,14 +74,23 @@ struct SurahDetailView: View {
                                 }
                                 .padding()
                             }.padding(.bottom, 25)
-                            
-                            
                         }
-                        SurahBottomNavBar(ScrollIndex: proxy)
-                    }.padding()
-                        .onAppear{
-                            proxy.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1, anchor: .top)
+                        SurahBottomNavBar()
+                    }
+                    .padding()
+                    .toolbar(content: {
+                        Button {
+                            withAnimation {
+                                proxy.scrollTo(AppViewModel.cSelectSurah?.bookmark ?? 1)
+                            }
+                        } label: {
+                            HStack{
+                                Text("GoTo:")
+                                Image(systemName: "bookmark.circle")
+                            }
                         }
+
+                    })
                 }
                 
                 

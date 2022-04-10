@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SurahBottomNavBar: View {
     @EnvironmentObject var AppViewModel: AppViewModel
-    var ScrollIndex:ScrollViewProxy
     
     var body: some View {
         if AppViewModel.isNextSurahAvailable() && AppViewModel.isPreviousSurahAvailable() {
@@ -17,11 +16,11 @@ struct SurahBottomNavBar: View {
                 SurahBottomNavBarRectangle()
                 HStack {
                     Spacer()
-                    SurahBottomNavBarPrevButton(ScrollIndex: ScrollIndex)
+                    SurahBottomNavBarPrevButton()
                     Spacer()
                     Divider()
                     Spacer()
-                    SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
+                    SurahBottomNavBarNextButton()
                     Spacer()
                 }
             }
@@ -30,7 +29,7 @@ struct SurahBottomNavBar: View {
                 SurahBottomNavBarRectangle()
                 HStack {
                     Spacer()
-                    SurahBottomNavBarPrevButton(ScrollIndex: ScrollIndex)
+                    SurahBottomNavBarPrevButton()
                     Spacer()
                     Divider()
                     Spacer()
@@ -47,7 +46,7 @@ struct SurahBottomNavBar: View {
                     Spacer()
                     Divider()
                     Spacer()
-                    SurahBottomNavBarNextButton(ScrollIndex: ScrollIndex)
+                    SurahBottomNavBarNextButton()
                     Spacer()
                 }
                 
@@ -68,7 +67,6 @@ struct SurahBottomNavBarRectangle: View {
 
 struct SurahBottomNavBarNextButton: View {
     @EnvironmentObject var AppViewModel: AppViewModel
-    var ScrollIndex:ScrollViewProxy
     
     var body: some View {
         Button {
@@ -84,7 +82,6 @@ struct SurahBottomNavBarNextButton: View {
 
 struct SurahBottomNavBarPrevButton: View {
     @EnvironmentObject var AppViewModel: AppViewModel
-    var ScrollIndex:ScrollViewProxy
     
     var body: some View {
         Button {
