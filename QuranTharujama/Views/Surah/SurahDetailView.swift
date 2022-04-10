@@ -89,7 +89,7 @@ struct SurahDetailView: View {
                                 Image(systemName: "bookmark.circle")
                             }
                         }
-
+                        
                     })
                 }
                 

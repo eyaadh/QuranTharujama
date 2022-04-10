@@ -70,7 +70,6 @@
 		39AB914927FFF7D900539667 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				39D5FBE927FEDED0000EE197 /* HomeMainView.swift */,
 				39D5FC0427FF710D000EE197 /* HomeRowView.swift */,
 			);
 			path = Main;
@@ -149,6 +148,7 @@
 		39D5FBF727FEDEE7000EE197 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				39D5FBE927FEDED0000EE197 /* HomeMainView.swift */,
 				39AB914927FFF7D900539667 /* Main */,
 				39AB914A27FFF7EF00539667 /* Surah */,
 			);

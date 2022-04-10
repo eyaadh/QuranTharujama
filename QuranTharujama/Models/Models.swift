@@ -12,31 +12,7 @@ struct AppData: Identifiable, Decodable {
     var app_version:String
     var app_name:String
     var developer:String
-    var duas:Duas
     var translation:Translation
-}
-
-struct Duas: Identifiable, Decodable {
-    var id:Int
-    var module_name:String
-    var image:String
-    var languages:String
-    var records:[DuaList]
-}
-
-struct DuaList: Identifiable, Decodable{
-    var id:Int
-    var name:String
-    var duas:[Dua]
-}
-
-struct Dua:Identifiable, Decodable {
-    var id:Int
-    var title:String
-    var arabic:String
-    var transliteration:String?
-    var translation:String?
-    var reference:String?
 }
 
 struct Translation: Identifiable, Decodable {

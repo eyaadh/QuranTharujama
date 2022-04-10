@@ -14,7 +14,7 @@ struct SurahListView: View {
     var body: some View {
         ScrollView {
             ForEach(AppViewModel.filteredSurahList){surah in
-                NavigationLink {
+                NavigationLink(tag: Int(surah.id), selection: $AppViewModel.cNavTag) {
                     SurahDetailView()
                         .onAppear {
                             AppViewModel.beginReadingSurah(sIndex: (surah.id - 1))
@@ -58,7 +58,8 @@ struct SurahListView: View {
                 
             }
         }
-        .navigationTitle("Select \(AppViewModel.translationData.module_name)")
+        .navigationTitle("Select the Chapter")
+        .navigationBarTitleDisplayMode(.inline)
         .searchable(text: $searchText)
         .onChange(of: searchText, perform: { newValue in
             if searchText.isEmpty {

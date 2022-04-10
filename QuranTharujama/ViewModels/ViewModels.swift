@@ -11,7 +11,6 @@ import Foundation
 class AppViewModel: ObservableObject {
     // MARK: - Globaly Shared Application Data
     var app_data = [AppData]()
-    @Published var duasData:Duas
     @Published var translationData:Translation
     
     // MARK: - Common Element Properties
@@ -31,7 +30,6 @@ class AppViewModel: ObservableObject {
     init() {
         self.app_data = DataService.getData()
         
-        self.duasData = self.app_data[0].duas
         self.translationData = self.app_data[0].translation
         self.cSelectSurah = self.translationData.records[1]
     }
@@ -49,8 +47,6 @@ class AppViewModel: ObservableObject {
         
         // Set the current Selected Surah
         cSelectSurah = translationData.records[self.scIndex]
-        
-        
     }
     
     // MARK: - Check if there is a next Surah
@@ -60,7 +56,7 @@ class AppViewModel: ObservableObject {
     
     // MARK: - Check if there is a previous Surah
     func isPreviousSurahAvailable() -> Bool {
-        return 0 <= (self.scIndex - 1) 
+        return 0 <= (self.scIndex - 1)
     }
     
     // MARK: - Advance to next Surah
