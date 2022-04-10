@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SurahListView: View {
     @EnvironmentObject var AppViewModel: AppViewModel
-    
+    @State var searchText:String = ""
     
     var body: some View {
         ScrollView {
-            ForEach(AppViewModel.translationData.records){surah in
+            ForEach(AppViewModel.filteredSurahList){surah in
                 NavigationLink {
                     SurahDetailView()
                         .onAppear {
@@ -55,9 +55,18 @@ struct SurahListView: View {
                     }.padding()
                 }
                 .accentColor(.black)
+                
             }
         }
         .navigationTitle("Select \(AppViewModel.translationData.module_name)")
+        .searchable(text: $searchText)
+        .onChange(of: searchText, perform: { newValue in
+            if searchText.isEmpty {
+                AppViewModel.filteredSurahList = AppViewModel.translationData.records
+            } else {
+                AppViewModel.filteredSurahList =  AppViewModel.filteredSurahList.filter({ newValue.isEmpty ? true : $0.transliteration.localizedCaseInsensitiveContains(searchText) })
+            }
+        })
     }
 }
 

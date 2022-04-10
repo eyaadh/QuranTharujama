@@ -24,6 +24,9 @@ struct HomeMainView: View {
                         // MARK: - Body Content: Quran Translation
                         NavigationLink(tag: 1, selection: $AppViewModel.cNavTag) {
                             SurahListView()
+                                .onAppear{
+                                    AppViewModel.filteredSurahList = AppViewModel.translationData.records
+                                }
                         } label: {
                             HomeRowView(imageName: AppViewModel.translationData.image, heading: AppViewModel.translationData.module_name, subHeading: AppViewModel.translationData.languages)
                         }

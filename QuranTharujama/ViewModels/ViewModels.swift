@@ -18,6 +18,9 @@ class AppViewModel: ObservableObject {
     @Published var bgOddCardColorVerse = Color(.sRGB, red: 207/255, green: 216/255, blue: 220/255, opacity: 1)
     @Published var bgOddCardColorSurah = Color(.sRGB, red: 255/255, green: 204/255, blue: 204/255, opacity: 1)
     
+    // MARK: - Filtered Surah
+    @Published var filteredSurahList:[Surah] = [Surah]()
+    
     // MARK: - Current Selected Surah
     @Published var cSelectSurah:Surah?
     var scIndex:Int = 0
